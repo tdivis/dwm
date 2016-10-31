@@ -33,7 +33,7 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 /* default layout per tags */
 /* The first element is for all-tag view, following i-th element corresponds to */
 /* tags[i]. Layout is referred using the layouts array index.*/
-static int def_layouts[1 + LENGTH(tags)]  = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+static int def_layouts[1 + LENGTH(tags)]  = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2};
 
 static const Rule rules[] = {
 	/* xprop(1):
