@@ -22,7 +22,10 @@ ${OBJ}: config.h config.mk
 config.h:
 	cp config.def.h $@
 
-dwm: ${OBJ}
+rmconfig:
+	@rm config.h
+
+dwm: rmconfig ${OBJ}
 	${CC} -o $@ ${OBJ} ${LDFLAGS}
 
 clean:
