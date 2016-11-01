@@ -33,7 +33,7 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "q", "w", "e", "r" };
 /* default layout per tags */
 /* The first element is for all-tag view, following i-th element corresponds to */
 /* tags[i]. Layout is referred using the layouts array index.*/
-static int def_layouts[1 + LENGTH(tags)]  = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2};
+static int def_layouts[1 + LENGTH(tags)]  = { 2, 2, 2, 2, 2, 2, 2, 0, 2, 2};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -42,7 +42,9 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-        //	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Firefox",  NULL,       NULL,       1,            0,           -1 },
+	{ "Thunderbird", NULL,    NULL,       1 << 5,       0,           -1 },
+	{ "Pidgin",   NULL,       NULL,       1 << 6,       0,           -1 },
 };
 
 /* layout(s) */
