@@ -45,6 +45,9 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,       NULL,       1,            0,           -1 },
 	{ "Thunderbird", NULL,    NULL,       1 << 5,       0,           -1 },
 	{ "Pidgin",   NULL,       NULL,       1 << 6,       0,           -1 },
+	{ "Audacious", NULL,      NULL,       1 << 4,       0,           -1 },
+	{ "Eclipse",  NULL,       NULL,       1 << 1,       0,           -1 },
+
 };
 
 /* layout(s) */
