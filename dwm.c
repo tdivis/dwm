@@ -2118,8 +2118,11 @@ view(const Arg *arg)
 {
 	int i;
 	unsigned int tmptag;
-	if ((arg->ui & TAGMASK) == selmon->tagset[selmon->seltags])
+	if ((arg->ui & TAGMASK) == selmon->tagset[selmon->seltags]) {
+		const Arg arg = {.i = 1 };
+		focusstack(&arg);
 		return;
+	}                
 	selmon->seltags ^= 1; /* toggle sel tagset */
 	if (arg->ui & TAGMASK) {
 		selmon->pertag->prevtag = selmon->pertag->curtag;
