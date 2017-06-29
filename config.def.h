@@ -65,8 +65,8 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", "tmux", NULL };
 static const char *lockcmd[]  = { "slock", NULL };
 static const char *playpausecmd[]  = { "audacious", "--play-pause", NULL };
-static const char *incvolumecmd[]  = { "amixer", "set", "PCM", "10%+", NULL };
-static const char *decvolumecmd[]  = { "amixer", "set", "PCM", "10%-", NULL };
+static const char *incvolumecmd[]  = { "amixer", "set", "Master", "10%+", NULL };
+static const char *decvolumecmd[]  = { "amixer", "set", "Master", "10%-", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
