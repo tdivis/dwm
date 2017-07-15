@@ -128,6 +128,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_a,      spawn,          {.v = alone_mode} },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v = desktop_mode} },
+	{ 0,                            0x1008ff02, spawn,         {.v = incbacklight } },
+	{ 0,                            0x1008ff03, spawn,         {.v = decbacklight } },
 };
 
 /* button definitions */
