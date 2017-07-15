@@ -123,6 +123,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_e,                      7)
 	TAGKEYS(                        XK_r,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ 0,                            0x1008ff02, spawn,         {.v = incbacklight } },
+	{ 0,                            0x1008ff03, spawn,         {.v = decbacklight } },
 };
 
 /* button definitions */
