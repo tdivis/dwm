@@ -31,8 +31,6 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,       NULL,       1,            0,           -1 },
 	{ "Thunderbird", NULL,    NULL,       1 << 5,       0,           -1 },
 	{ "Pidgin",   NULL,       NULL,       1 << 6,       0,           -1 },
-	{ "Audacious", NULL,      NULL,       1 << 4,       0,           -1 },
-	{ "Eclipse",  NULL,       NULL,       1 << 1,       0,           -1 },
 
 };
 
@@ -44,7 +42,7 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[M]",      monocle }, /* first entry is default */
-	{ "[]=",      tile },    
+	{ "[]=",      tile },
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 };
 
@@ -64,9 +62,12 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", "tmux", NULL };
 static const char *lockcmd[]  = { "slock", NULL };
-static const char *playpausecmd[]  = { "audacious", "--play-pause", NULL };
-static const char *incvolumecmd[]  = { "amixer", "set", "Master", "10%+", NULL };
-static const char *decvolumecmd[]  = { "amixer", "set", "Master", "10%-", NULL };
+static const char *sleepcmd[]  = { "sudo", "pm-suspend", NULL };
+static const char *playpausecmd[]  = { "mpc", "toggle", NULL };  // toggle play/stop in mpd
+static const char *incvolumecmd[]  = { "pactl", "set-sink-volume", "2", "+5dB", NULL };
+static const char *decvolumecmd[]  = { "pactl", "set-sink-volume", "2", "-5dB", NULL };
+static const char *incbacklight[]  = { "xbacklight", "-inc", "10", NULL };
+static const char *decbacklight[]  = { "xbacklight", "-dec", "10", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -125,4 +126,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
