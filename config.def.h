@@ -82,6 +82,8 @@ static const char *clipmenucmd[] = {
 	"MousePrimary",
 	NULL
 };
+static const char *alone_mode[]  = { "/home/glin/scripts/alone.sh", NULL };
+static const char *desktop_mode[]  = { "/home/glin/scripts/desk.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -124,6 +126,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_e,                      7)
 	TAGKEYS(                        XK_r,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_a,      spawn,          {.v = alone_mode} },
+	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v = desktop_mode} },
 };
 
 /* button definitions */
