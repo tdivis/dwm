@@ -68,10 +68,12 @@ static const char *incvolumecmd[]  = { "pactl", "set-sink-volume", "2", "+5dB", 
 static const char *decvolumecmd[]  = { "pactl", "set-sink-volume", "2", "-5dB", NULL };
 static const char *incbacklight[]  = { "xbacklight", "-inc", "10", NULL };
 static const char *decbacklight[]  = { "xbacklight", "-dec", "10", NULL };
+static const char *clipmenucmd[] = { "/home/glin/bin/clipmenu/clipmenu", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_c,      spawn,          {.v = clipmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ ControlMask|Mod1Mask,         XK_l,      spawn,          {.v = lockcmd } },
 	{ 0,                            0x1008ff14, spawn,         {.v = playpausecmd } }, // code of Play button on MS Natural 4000 keyboard, got by `xev`
