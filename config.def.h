@@ -68,7 +68,17 @@ static const char *incvolumecmd[]  = { "pactl", "set-sink-volume", "2", "+5dB", 
 static const char *decvolumecmd[]  = { "pactl", "set-sink-volume", "2", "-5dB", NULL };
 static const char *incbacklight[]  = { "xbacklight", "-inc", "10", NULL };
 static const char *decbacklight[]  = { "xbacklight", "-dec", "10", NULL };
-static const char *clipmenucmd[] = { "/home/glin/bin/clipmenu/clipmenu", NULL };
+static const char *clipmenucmd[] = {
+	"/home/glin/bin/clipmenu/clipmenu",
+	"-i",
+	"-theme",
+	"/home/glin/bin/rofi-themes/Official Themes/Indego.rasi",
+	"-me-select-entry",
+	"",
+	"-me-accept-entry",
+	"MousePrimary",
+	NULL
+};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
