@@ -89,6 +89,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_c,      spawn,          {.v = clipmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ ControlMask|Mod1Mask,         XK_l,      spawn,          {.v = lockcmd } },
+	{ 0,                            0x1008ff1d, spawn,         {.v = playpausecmd } }, // code of Calculator button on MS Sculpt keyboard, got by `xev`
 	{ 0,                            0x1008ff14, spawn,         {.v = playpausecmd } }, // code of Play button on MS Natural 4000 keyboard, got by `xev`
 	{ 0,                            0x1008ff13, spawn,         {.v = incvolumecmd } },
 	{ 0,                            0x1008ff11, spawn,         {.v = decvolumecmd } },
